@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header {
+    background: white;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+nav li {
+    float: right;
+    display: inline;
+}
+
+nav a {
+    display: inline-block;
+    padding: 20px 25px;
+    text-decoration: none;
+    color: crimson;
+}
+
+nav .logo {
+    float: left;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+nav a.active {
+    background: crimson;
+    color: white;
+}
+
+.hero {
+    color: white;
+    text-align: center;
+    padding: 150px 0;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
