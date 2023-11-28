@@ -72,14 +72,14 @@ img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 10px;
+  max-width: 1000px;
   position: relative;
   margin: auto;
 }
 
 /* Caption text */
-.text {
-  color: #f2f2f2;
+.text1 {
+  color: black;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
@@ -88,14 +88,50 @@ img {vertical-align: middle;}
   text-align: center;
 }
 
+/* Caption text */
+.text2 {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+
+  
+  /* Caption text */
+.text3 {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+.myText{
+    border: 1px ;
+    padding-bottom:0px;
+    padding-top:0px;
+    padding-right: 500px;
+    padding-left: 500px;
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+    
+}
 /* Number text (1/3 etc) */
-.numbertext {
+/* .numbertext {
   color: #f2f2f2;
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
   top: 0;
-}
+} */
+
+
 
 /* The dots/bullets/indicators */
 .dot {
@@ -115,7 +151,7 @@ img {vertical-align: middle;}
 /* Fading animation */
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 2.5s;
 }
 
 @keyframes fade {
