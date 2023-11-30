@@ -1,46 +1,15 @@
-<!-- 
 <?php
-// $servername = "localhost";
-// $username = "root";
-// $password = "";
-// $database = "phpMyAdimn";
+$db_host = "localhost";
+$db_user = "root";
+$db_password = "";
+$db_name = "user_db";
 
-// $conn = new mysqli($servername , $username, $password, $database);
+// Create Connection
+$conn = new mysqli($db_host, $db_user, $db_password, $db_name);
 
-// if ($conn->connect_error){
-//     die(" Connection failed: " . $conn->connect_error);
-// } else {
-//     echo " Connected successfully";
-// }
-
-// $conn->close();
-
-
-?> -->
-
-
-
-
-
-
-
-
-
-
-<!-- php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "phpMyAdimn";
-
-$conn = new mysqli($servername , $username, $password, $database);
-
-if ($conn->connect_error){
-    die(" Connection failed: " . $conn->connect_error);
-} else {
-    echo " Connected successfully";
+// Check Connection
+if($conn->connect_error) {
+ die("connection failed");
 }
-
-$conn->close(); -->
-
+?>
 

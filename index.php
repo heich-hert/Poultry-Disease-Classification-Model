@@ -6,7 +6,7 @@
     <title>Landing Page</title>
     <link rel="stylesheet" href="style2.css">
 </head>
-<body style="background-color: #E48F45 ;">
+<body style="background-image:url(bg4.jpeg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
 
     <header>
         <nav>
@@ -59,11 +59,7 @@
   <span class="dot"></span> 
 </div>
 <div class="myText">
-<p>We understand how crucial the health of your chickens is to you. Our platform is here to assist you in identifying and predicting potential health issues in your feathered friends. If you have an image of a sick chicken, you're in the right place!
-
-Simply use the upload form below to share images of your chickens, and our advanced prediction system will analyze them to provide insights into potential health concerns. Don't worry; we're here to help ensure your chickens lead happy and healthy lives.
-
-Thank you for entrusting us with the well-being of your chickens. Let's work together to keep your flock thriving!</p>
+<p>Upload chicken waste image below to effortlessly identify the Disease. </p>
 </div>
           
             <form action="upload.php" method="post" enctype="multipart/form-data">
@@ -71,11 +67,26 @@ Thank you for entrusting us with the well-being of your chickens. Let's work tog
              
                 <input type="submit" value="Upload">
             </form>
-      
+
+            <!-- hhhhhhh -->
+      <div>
+
+      <h1>Image Classification Result</h1>
+    
+    <p>Predicted Class: {{ predicted_class }}</p>
+    <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Image">
+
+      </div>
+      <!-- hhhhhhhhh -->
     </section>
 
 
     <script>
+
+
+
+
+
 let slideIndex = 0;
 showSlides();
 

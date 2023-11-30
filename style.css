@@ -7,6 +7,12 @@ box-sizing: border-box;
 outline: none; border:none;
 text-decoration: none;
 }
+body{
+    background-image: url(bg1-1.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
 .container{
     min-height: 100vh;
     display: flex;
@@ -17,12 +23,19 @@ text-decoration: none;
 }
 
 .container .content{
-text-align: center;
+
+padding-bottom:0px;
+    padding-top:0px;
+    padding-right: 300px;
+    padding-left: 500px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }
 
 .container .content h3{
 font-size: 30px;
-color: #333;
+color: black;
 }
 
 .container .content h3 span {
@@ -34,7 +47,7 @@ color: #333;
 
 .container .content h1{
     font-size: 50px;
-    color: #333;
+    color: black;
     }
 
     .container .content h1 span {
@@ -49,7 +62,7 @@ color: #333;
         display: inline-block;
         padding: 10px 30px;
         font-size: 20px;
-        background: #333;
+        background: black;
         color: #fff;
         margin:0 5px;
         text-transform: capitalize;
@@ -79,7 +92,7 @@ color: #333;
         font-size: 30px;
         text-transform: uppercase;
         margin-bottom: 10px;
-        color: #333;
+        color: black;
     }
 
     .form-container form input,
@@ -95,7 +108,7 @@ color: #333;
         background: #fff;
     }
     .form-container form .form-btn{
-        background: #fdb0d9;
+        background: black;
         color: crimson;
         text-transform: capitalize;
         font-size: 20px;
@@ -110,7 +123,7 @@ color: #333;
     .form-container form p{
         margin-top: 10px;
         font-size: 20px;
-        color: #333;
+        color: black;
     }
     .form-container form p a{
         color: crimson;
