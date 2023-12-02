@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link rel="stylesheet" href="style2.css">
-</head>
 <body style="background-image:url(bg4.jpeg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
 
     <header>
@@ -62,25 +61,42 @@
 <p>Upload chicken waste image below to effortlessly identify the Disease. </p>
 </div>
           
-            <form action="upload.php" method="post" enctype="multipart/form-data">
-                <input type="file" name="fileToUpload" id="fileToUpload">
-             
-                <input type="submit" value="Upload">
-            </form>
+<form action="/classify" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" id="file">
+    <input type="submit" value="Upload and Classify">
+</form>
 
-            <!-- hhhhhhh -->
-      <div>
-
-      <h1>Image Classification Result</h1>
-    
-    <p>Predicted Class: {{ predicted_class }}</p>
-    <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Image">
-
-      </div>
+<div>
+    <h1>Image Classification Result</h1>
+    <p>Predicted Class: <span id="predicted_class"></span></p>
+    <img id="uploaded_image" src="" alt="Uploaded Image">
+</div>
       <!-- hhhhhhhhh -->
     </section>
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
+    <script>
+$(document).ready(function() {
+    $('form').submit(function(event) {
+        event.preventDefault();
+
+        var formData = new FormData($(this)[0]);
+
+        $.ajax({
+            url: '/classify',
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function(data) {
+                $('#predicted_class').text(data.predicted_class);
+                $('#uploaded_image').attr('src', 'static/uploads/' + data.filename);
+            }
+        });
+    });
+});
+</script>
     <script>
 
 

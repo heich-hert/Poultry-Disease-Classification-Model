@@ -3,11 +3,15 @@ from werkzeug.utils import secure_filename
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import numpy as np
+import os
 
-app = Flask(_name_)
+
+app = Flask(__name__)
 
 # Load your pre-trained model
-model = load_model('mymodel.h5')
+model_path = os.path.join('model', 'efficientnetb3-Chicken Disease-98.64.h5')
+model = load_model(model_path)
+
 
 # Define allowed extensions for file uploads
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
@@ -17,7 +21,7 @@ def allowed_file(filename):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.php')
 
 @app.route('/classify', methods=['POST'])
 def classify():
@@ -61,5 +65,5 @@ def classify():
     else:
         return 'Invalid file format'
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run(port=5000, debug=True)
